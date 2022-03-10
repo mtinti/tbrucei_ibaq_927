@@ -384,11 +384,16 @@ function scaterPlot(data, selection, in_width, in_height, unique_id, x_col, y_co
             for (var i = 1; i < BOX_PLOT_COLS_1.length+1; i++) {
               x1_array.push(i);}
             
-            for (var i = BOX_PLOT_COLS_1.length+1; i < BOX_PLOT_COLS_1.length+BOX_PLOT_COLS_2.length; i++) {
+            for (var i = BOX_PLOT_COLS_1.length+1; i < BOX_PLOT_COLS_1.length+BOX_PLOT_COLS_2.length+1; i++) {
               x2_array.push(i);}
 
             
-
+            var xs_box = {
+                //CONDITION_1: 'x1',
+                //CONDITION_2: 'x2',
+                  };
+            xs_box[CONDITION_1]='x1';
+            xs_box[CONDITION_2]='x2';
 
             //load box plot
             box_plot_chart.load({
@@ -406,10 +411,7 @@ function scaterPlot(data, selection, in_width, in_height, unique_id, x_col, y_co
               ],
 
     
-              xs: {
-                'BSF': 'x1',
-                'PCF': 'x2',
-                },
+              xs: xs_box,
 
 
             });

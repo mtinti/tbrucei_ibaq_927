@@ -1,7 +1,7 @@
-let X1='bsf_median';
-let Y1='pcf_median';
-let X2='rank_bsf_median';
-let Y2='rank_pcf_median';
+let X1='bsf';
+let Y1='pcf';
+let X2='rank_bsf';
+let Y2='rank_pcf';
 
 let Y_LABEL_SCATTER1 = 'iBAQ PCF';
 let X_LABEL_SCATTER1 = 'iBAQ BSF';
@@ -16,6 +16,7 @@ let PLOT_WIDTH=550;
 let PLOT_HEIGHT=400;
 
 let PROJECT_TITLE='Absolute Protein Quantification TREU927';
+let TAB_TITLE='TREU927 iBAQ'
 
 let _margin_1 = 0;
 let _margin_2 = 0;
@@ -43,3 +44,8 @@ let Y_LABEL_BARPLOT = 'iBAQ';
 
 let File_1 = 'indata.csv';
 let File_2 = 'indata2.csv';
+
+
+//these are th columns to show from file n1
+//positions og Gene_acc','Gene_id' must not change
+let COLUMNS_TO_TABULATE = ['Gene_acc','Gene_id','bsf','pcf','rank_bsf', 'rank_pcf', 'Desc','prot_group'];
