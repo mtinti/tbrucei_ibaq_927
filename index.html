@@ -98,11 +98,14 @@
       
     </div>
 
-    <div class="row d-flex flex-row">
+    <div class="row d-flex flex-row" id="reset_table_div">
 
-      <div class="col-md-5">
-        <button id="seach_visible", type="submit" class="btn btn-primary" >Seach Visible</button>
+      <div class="col-md-5" >
+        <form id="my-form-table">
+        <button id="seach_visible" type="submit" class="btn btn-primary" >Seach Visible</button>
+        <button id="reset_table"   type="reset" class="btn btn-primary" >Reset Table</button>
         <div> <br> </div>
+        </form>
         <table id='table' class="display compact"></table>
       </div>
 
@@ -130,7 +133,7 @@
 
 
             <button type="submit" class="btn btn-primary" >Submit</button>
-            <button type="reset" class="btn btn-primary" >Reset</button>
+            <button type="reset"  class="btn btn-primary" >Reset</button>
             
 
 
@@ -580,6 +583,12 @@
         
         });  
 
+      $('#my-form-table').on("reset", function(e) {
+        console.log('reset table');
+        table.search('').columns().search('').draw();
+      });
+
+
       //select the columns to plot from config file
       //add the plots
       scaterPlot(files[0], "plot1", PLOT_WIDTH, PLOT_HEIGHT, "plot_a", X1, Y1, table, 
@@ -721,7 +730,16 @@
 
 
     });
+    
 
+
+    
+
+  
+  
+    
+
+ 
 
 
     $( document ).ready(function() {
