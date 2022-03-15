@@ -16,7 +16,7 @@ let PLOT_WIDTH=550;
 let PLOT_HEIGHT=400;
 
 let PROJECT_TITLE='Absolute Protein Quantification TREU927';
-let TAB_TITLE='TREU927 iBAQ'
+let TAB_TITLE='927 iBAQ'
 
 let _margin_1 = 0;
 let _margin_2 = 0;
